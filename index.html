@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="./images/game.ico" type="image/x-icon">
+	<title>Rock Paper Scissor</title>
+	<link rel="stylesheet" href="dist/build.css" />
+</head>
+
+<body class="flex flex-col items-center justify-center h-screen bg-gray-200">
+	<!-- Header -->
+	<h1 class="text-3xl font-chewy tracking-wider uppercase text-center text-gray-900 mb-5 text-shadow">Rock Paper Scissors</h1>
+
+	<!-- Game Operations Section -->
+	<section class="border-2 border-gray-400 shadow-2xl rounded-2xl p-6 w-[400px] bg-gray-100">
+		<div>
+			<!-- Score Container -->
+			<div class="mb-4 rounded-2xl bg-gray-300 p-4 flex justify-between">
+				<!-- Player 1 Score-->
+				<div class="flex flex-1">
+					<div class="flex flex-col items-start font-roboto-mono font-bold">
+						<span id="player1-name" class="text-sm uppercase text-gray-500 w-full">user3452
+						</span>
+						<span id="player1-score" class="text-6xl text-gray-900"></span>
+					</div>
+				</div>
+				<!-- Versus -->
+				<div class="flex-none flex items-center justify-center font-chewy pt-6 px-3 text-green-800">
+					<p id="status">#</p>
+				</div>
+				<!-- Player 2 Score-->
+				<div class="flex flex-1 items-end justify-end">
+					<div class="flex flex-col items-end font-roboto-mono font-bold">
+						<span id="player2-name" class="text-sm uppercase text-gray-500">computer</span>
+						<span id="player2-score" class="text-6xl text-gray-900"></span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Avatar Display -->
+			<div class="flex justify-around gap-10 mb-4 p-4 rounded-2xl bg-gray-300 min-h-[170px]">
+				<!-- Player 1 Avatar -->
+				<div id="player1-choice" class="bg-white flex-1 flex justify-center items-center rounded-2xl"></div>
+				<!-- Player 2 Avatar -->
+				<div id="player2-choice" class="bg-white flex-1 flex justify-center items-center rounded-2xl"></div>
+			</div>
+
+			<!-- Game Choice Buttons  -->
+			<div class="flex gap-8 justify-between align-center">
+				<!-- Game Choices -->
+				<div class="flex gap-8 justify-start">
+					<div id="rock-img" data-game-choice="rock" class="game-btn h-10 w-10 cursor-pointer">
+						<img src="./images/rock.jpeg" alt="" srcset="" />
+					</div>
+					<div id="paper-img" data-game-choice="paper" class="game-btn h-10 w-10 cursor-pointer">
+						<img src="./images/paper.jpeg" alt="" srcset="" />
+					</div>
+					<div id="scissors-img" data-game-choice="scissor" class="game-btn h-10 w-10 cursor-pointer">
+						<img src="./images/scissor.jpeg" alt="" srcset="" />
+					</div>
+				</div>
+				<!-- Reset Button -->
+				<div class="text-sm text-gray-500 font-roboto-mono font-semibold">
+					<button class="px-2 py-2 rounded-xl border border-gray-500 hover:bg-gray-300 transition-all uppercase shadow-sm hover:shadow-lg cursor-pointer" id="reset-btn" type="button">
+						reset
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="./js/main.js"></script>
+
+</html>
